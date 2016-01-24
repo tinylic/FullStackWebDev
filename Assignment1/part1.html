@@ -7,7 +7,7 @@
 
 	<body>
 		<h1>	Please Enter Your Details For Our Dating Website!	</h1>
-		<form>
+		<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
 			<fieldset>
 				<legend>	Your Face		</legend>
 				<label for="face">	Your Image:	</label>
@@ -20,7 +20,7 @@
 				<legend>	Your General Details	</legend>
 				<label for="name">	Name:		</label>		
 					<input type="text" id="name" name="name" required>	<br>
-				Gender:
+				<label for="gend">	Gender:		</label>
 				<label for="male">
 					<input type="radio" id="male" name="gender" checked> Male
 				</label>
@@ -37,7 +37,18 @@
 				
 				<label for="color">	Favorite Color:	</label>
 					<input type="color" id="color" name="color" required>	<br>
-				<label for="country" id="country" name="country" required>	Which Country:	</label>		<br>
+				<label for="country">	Which Country:	</label>	
+					<select id="country" name="country">
+						<option value="default" selected>	Other Countries		</option>
+						<option value="United States">		United States		</option>
+						<option value="China">			China			</option>
+						<option value="India">			India			</option>
+						<option value="Singapore">		Singapore		</option>
+						<option value="United Kindom">		United Kindom		</option>
+						<option value="France">			France			</option>
+						<option value="Germany">		Germany		</option>
+						<option value="Russia">			Russia			</option>						
+					</select>
 			</fieldset>
 
 			<fieldset>
