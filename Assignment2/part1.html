@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>	Guess the Color Game</title>
+	</head>
+
+	<body onload="do_game()">
+		<script>
+			var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange",  "red", "white", "yellow"];
+			var ncolors = colors.length;
+			var stop = false;
+			var target;
+			var do_game = function() {
+				target = Math.floor(Math.random() * ncolors);
+				while (stop == false) {
+					var ans = prompt("I am thinking of one  of these colors:\n" + colors.join(", ") + "\nWhat color I am thinking of?");
+					stop = ans === colors[target];
+				}
+			};
+		</script>
+	</body>
+</html>
