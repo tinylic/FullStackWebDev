@@ -9,9 +9,9 @@
 		content must come *after* these tags -->
 	<title>Ristorante Con Fusion</title>
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/bootstrap-social.css" rel="stylesheet">
 	<link href="css/mystyles.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -59,7 +59,7 @@
 					<li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a data-toggle="modal" data-target="#loginModal">
+					<li><a id="navbar-login-btn">
 					<span class="glyphicon glyphicon-log-in"></span> Login</a>
 					</li>
 				</ul>
@@ -392,9 +392,9 @@
 	</footer>
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
-	<!--	Include	all	compiled	plugins	(below),	or	include	individual	files as	needed	-->	
-	<script	src="js/bootstrap.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
@@ -411,6 +411,12 @@
 				});
 				$("#carousel-play").click(function(){
 					$("#mycarousel").carousel('cycle');
+				});
+				$("#navbar-login-btn").click(function(){
+					$('#loginModal').modal('show');
+				});
+				$("#header-reserve-btn").click(function(){
+					$('#reserveModal').modal('show');
 				});
 		});
 	</script>
